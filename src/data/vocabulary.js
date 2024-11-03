@@ -1,0 +1,18 @@
+export const vocabulary = [
+    { english: "Hello", urdu: "ہیلو", urduEnglish: "Hello" },
+    { english: "Thank you", urdu: "شکریہ", urduEnglish: "Shukriya" },
+    { english: "Goodbye", urdu: "خدا حافظ", urduEnglish: "Khuda Hafiz" },
+    { english: "Yes", urdu: "جی ہاں", urduEnglish: "Ji Haan" },
+    { english: "No", urdu: "نہیں", urduEnglish: "Nahi" },
+    { english: "Please", urdu: "براہ کرم", urduEnglish: "Barah-e-karam" },
+    { english: "Sorry", urdu: "معاف کیجیے", urduEnglish: "Maaf Keejiye" },
+    { english: "Excuse me", urdu: "معاف کیجیے گا", urduEnglish: "Maaf Keejiye Ga" },
+    { english: "How are you?", urdu: "آپ کیسے ہیں؟", urduEnglish: "Aap kaise hain?" },
+    { english: "I'm fine", urdu: "میں ٹھیک ہوں", urduEnglish: "Main theek hoon" },
+    { english: "What is your name?", urdu: "آپ کا نام کیا ہے؟", urduEnglish: "Aap ka naam kya hai?" },
+    { english: "My name is...", urdu: "میرا نام ... ہے", urduEnglish: "Mera naam ... hai" },
+    { english: "Where are you from?", urdu: "آپ کہاں سے ہیں؟", urduEnglish: "Aap kahan se hain?" },
+    { english: "I am from...", urdu: "میں ... سے ہوں", urduEnglish: "Main ... se hoon" },
+    { english: "Good morning", urdu: "صبح بخیر", urduEnglish: "Subah Bakhair" },
+    { english: "Good night", urdu: "شب بخیر", urduEnglish: "Shab Bakhair" },
+  ];
