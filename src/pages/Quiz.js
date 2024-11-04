@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { vocabulary } from '../data/vocabulary';
 import { differentCountriesVocab } from '../data/differentCountriesVocab';
@@ -8,9 +8,23 @@ const lessonVocabularies = {
   'nationality': differentCountriesVocab,
 };
 
+// Move generateOptions outside the Quiz component
+const generateOptions = (vocab, correctAnswer) => {
+  let options = [correctAnswer];
+  while (options.length < 3) {
+    const randomOption = vocab[Math.floor(Math.random() * vocab.length)];
+    if (!options.includes(randomOption)) {
+      options.push(randomOption);
+    }
+  }
+  return options.sort(() => Math.random() - 0.5);
+};
+
 function Quiz() {
   const { lessonId } = useParams();
-  const vocab = lessonVocabularies[lessonId] || [];
+
+  // Memoize vocab based on lessonId
+  const vocab = useMemo(() => lessonVocabularies[lessonId] || [], [lessonId]);
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -21,8 +35,7 @@ function Quiz() {
 
   useEffect(() => {
     if (vocab.length > 0) {
-      // Set options for the current question once
-      setOptions(generateOptions(vocab[currentQuestion]));
+      setOptions(generateOptions(vocab, vocab[currentQuestion]));
     }
   }, [currentQuestion, vocab]);
 
@@ -37,17 +50,6 @@ function Quiz() {
       </div>
     );
   }
-
-  const generateOptions = (correctAnswer) => {
-    let options = [correctAnswer];
-    while (options.length < 3) {
-      const randomOption = vocab[Math.floor(Math.random() * vocab.length)];
-      if (!options.includes(randomOption)) {
-        options.push(randomOption);
-      }
-    }
-    return options.sort(() => Math.random() - 0.5);
-  };
 
   const handleAnswer = (answer) => {
     const isCorrect = answer === vocab[currentQuestion].urduEnglish;
@@ -84,6 +86,7 @@ function Quiz() {
       {showScore ? (
         <div className="bg-white p-8 rounded-lg shadow-lg animate__animated animate__fadeInUp">
           <p className="text-2xl font-bold text-green-700">You scored {score} out of {vocab.length}</p>
+          <p className="text-2xl font-bold text-green-700">{score / vocab.length * 100}%</p>
 
           <div className="mt-6 text-left">
             <h3 className="text-xl font-semibold mb-4">Quiz Summary</h3>
