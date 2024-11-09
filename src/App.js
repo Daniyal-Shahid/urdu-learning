@@ -9,6 +9,7 @@ import Quiz from './pages/Quiz';
 import Practice from './pages/Practice';
 import Nationality from './pages/Nationality';
 import DifferentCountriesNationality from './pages/DifferentCountriesNationality';
+import Changelog from './pages/Changelog';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <div className="container mx-auto p-4">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path='/changelog' element={<Changelog />} />
           <Route path="/lessons" element={<Lessons />} />
           <Route path="/lessons/greetings" element={<Greetings />} />
           <Route path="/lessons/greetings/lesson-one" element={<LessonOne />} />
