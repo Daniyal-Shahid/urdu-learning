@@ -13,7 +13,24 @@ function Lessons() {
         <Link to="/lessons/nationality" className="card bg-secondary text-secondary-content shadow-lg p-6 rounded-lg text-center transition transform hover:scale-105">
           <h3 className="text-xl font-semibold">Nationality</h3>
         </Link>
-        {/* Add more topic cards here as you expand */}
+        <Link to="/lessons/numbers" className="card bg-secondary text-secondary-content shadow-lg p-6 rounded-lg text-center transition transform hover:scale-105">
+          <h3 className="text-xl font-semibold">Numbers 1-20</h3>
+        </Link>
+        <Link to="/lessons/family" className="card bg-secondary text-secondary-content shadow-lg p-6 rounded-lg text-center transition transform hover:scale-105">
+          <h3 className="text-xl font-semibold">Family Members</h3>
+        </Link>
+        <Link to="/lessons/colors" className="card bg-secondary text-secondary-content shadow-lg p-6 rounded-lg text-center transition transform hover:scale-105">
+          <h3 className="text-xl font-semibold">Colors</h3>
+        </Link>
+        <Link to="/lessons/food" className="card bg-secondary text-secondary-content shadow-lg p-6 rounded-lg text-center transition transform hover:scale-105">
+          <h3 className="text-xl font-semibold">Basic Food Items</h3>
+        </Link>
+        <Link to="/lessons/time" className="card bg-secondary text-secondary-content shadow-lg p-6 rounded-lg text-center transition transform hover:scale-105">
+          <h3 className="text-xl font-semibold">Time Expressions</h3>
+        </Link>
+        <Link to="/lessons/weather" className="card bg-secondary text-secondary-content shadow-lg p-6 rounded-lg text-center transition transform hover:scale-105">
+          <h3 className="text-xl font-semibold">Weather</h3>
+        </Link>
       </div>
     </div>
   );

@@ -10,6 +10,12 @@ import Practice from './pages/Practice';
 import Nationality from './pages/Nationality';
 import DifferentCountriesNationality from './pages/DifferentCountriesNationality';
 import Changelog from './pages/Changelog';
+import Numbers from './pages/Numbers';
+import Family from './pages/Family';
+import Colors from './pages/Colors';
+import Food from './pages/Food';
+import Time from './pages/Time';
+import Weather from './pages/Weather';
 
 function App() {
   return (
@@ -25,6 +31,12 @@ function App() {
           <Route path="/lessons/:lessonId/quiz" element={<Quiz />} /> {/* Dynamic Quiz Path */}
           <Route path="/lessons/nationality" element={<Nationality />} />
           <Route path="/lessons/nationality/DifferentCountriesNationality" element={<DifferentCountriesNationality />} />
+          <Route path="/lessons/numbers" element={<Numbers />} />
+          <Route path="/lessons/family" element={<Family />} />
+          <Route path="/lessons/colors" element={<Colors />} />
+          <Route path="/lessons/food" element={<Food />} />
+          <Route path="/lessons/time" element={<Time />} />
+          <Route path="/lessons/weather" element={<Weather />} />
           <Route path="/practice" element={<Practice />} />
         </Routes>
       </div>
